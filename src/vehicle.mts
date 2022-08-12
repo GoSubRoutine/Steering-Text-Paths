@@ -71,8 +71,8 @@ export default class Vehicle {
 
   flee(target: p5.Vector) {
     const
-    { tmp, pos, vel } = this,
-    { MAX_DIST, MAX_SPEED, MAX_FORCE } = Vehicle;
+      { tmp, pos, vel } = this,
+      { MAX_DIST, MAX_SPEED, MAX_FORCE } = Vehicle;
 
     return tmp.set(target).sub(pos).mag() >= MAX_DIST >> 1?
       tmp.mult(0) :
