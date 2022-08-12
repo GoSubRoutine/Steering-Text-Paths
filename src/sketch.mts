@@ -32,7 +32,7 @@ export default function sketch(p: p5) {
 
   p.preload = function() {
     font = this.loadFont(FONT_PATH);
-  }
+  };
 
   p.setup = function() {
     this.createCanvas(750, 300);
@@ -46,10 +46,10 @@ export default function sketch(p: p5) {
     );
 
     bg = this.color(BG);
-  }
+  };
 
   p.draw = function() {
     this.background(bg);
     for (const vehicle of vehicles)  vehicle.behaviors().update().display();
-  }
+  };
 }
