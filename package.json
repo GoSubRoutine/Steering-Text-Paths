@@ -17,6 +17,7 @@
     "textToPoints()",
     "createVector()",
     "random2D()",
+    "sub()",
     "setMag()",
     "limit()"
   ],
