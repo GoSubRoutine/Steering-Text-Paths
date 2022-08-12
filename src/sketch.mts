@@ -9,6 +9,7 @@
  * GoToLoop (2022-Aug-12)
  *
  * https://GitHub.com/GoSubRoutine/Steering-Text-Paths
+ * https://GoSubRoutine.GitHub.io/Steering-Text-Paths/
  *
  * https://Discourse.Processing.org/t/
  * cant-access-p5-vector-methods-in-typescript-like-random2d-and-sub/38315/2

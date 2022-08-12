@@ -1,2 +1,2 @@
 # Steering-Text-Paths
-https://YouTube.com/watch?v=4hA7G3gup-4
+https://GoSubRoutine.GitHub.io/Steering-Text-Paths/
