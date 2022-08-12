@@ -16,11 +16,11 @@ export default class Vehicle {
   constructor(
     x: number, y: number,
     protected p = window.p5?.instance,
-    public pos = p.createVector(p.random(p.width), p.random(p.height)),
-    public tgt = p.createVector(x, y),
-    public acc = p.createVector(),
-    public tmp = p.createVector(),
-    public col = p.color(Vehicle.STROKE)
+    public    pos = p.createVector(p.random(p.width), p.random(p.height)),
+    public    tgt = p.createVector(x, y),
+    protected acc = p.createVector(),
+    protected tmp = p.createVector(),
+    public    col = p.color(Vehicle.STROKE)
   ) {}
 
   update() {

@@ -4,8 +4,8 @@ export default class Vehicle {
     protected p: p5;
     pos: p5.Vector;
     tgt: p5.Vector;
-    acc: p5.Vector;
-    tmp: p5.Vector;
+    protected acc: p5.Vector;
+    protected tmp: p5.Vector;
     col: p5.Color;
     static readonly STROKE = "lime";
     static readonly DIAM = 6;
