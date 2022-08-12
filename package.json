@@ -1,0 +1,44 @@
+{
+  "name": "steering_text_paths",
+  "version": "1.0.0",
+  "description": "https://GitHub.com/CodingTrain/Coding-Challenges",
+  "author": "Daniel Shiffman",
+  "license": "MIT",
+  "homepage": "https://YouTube.com/watch?v=4hA7G3gup-4",
+  "repository": "https://GitHub.com/GoSubRoutine/Steering-Text-Paths",
+  "type": "module",
+  "private": true,
+  "keywords": [
+    "types",
+    "module",
+    "mts",
+    "mjs",
+    "loadFont()",
+    "textToPoints()",
+    "createVector()",
+    "random2D()",
+    "setMag()",
+    "limit()"
+  ],
+  "scripts": {
+    "compile": "cd scripts && compile",
+    "start": "cd scripts && run",
+    "test": "cd scripts && compile && run",
+    "setup": "cd scripts && setup",
+    "update": "cd scripts && update",
+    "preinstall":
+      "cd scripts && install-dev-apps & install-dev-libs & install-lib-types"
+  },
+  "devDependencies": {
+    "p5": ">=1",
+    "@types/p5": ">=1"
+  },
+  "peerDependencies": {
+    "typescript": ">=4.7",
+    "serve": "x"
+  },
+  "peerDependenciesMeta": {
+    "typescript": { "optional": true },
+    "serve": { "optional": true }
+  }
+}
