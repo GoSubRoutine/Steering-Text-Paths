@@ -1,5 +1,5 @@
 /**
- * Steering Text Paths #059 (v1.0.2)
+ * Steering Text Paths #059 (v1.0.3)
  * Daniel Shiffman (2017-Feb)
  *
  * https://GitHub.com/CodingTrain/Coding-Challenges/tree/main/059_Steering_Text_Paths
@@ -15,8 +15,8 @@
  * cant-access-p5-vector-methods-in-typescript-like-random2d-and-sub/38315/2
 */
 import Vehicle from "./vehicle.mjs";
+const TXT = 'Coding Train', ASSETS = 'assets/', FONT_PATH = ASSETS + 'AvenirNextLTPro-Demi.otf', FONT_SIZE = 0o150, OFFSET = 50, FACTOR = .25, BG = 0o100;
 export default function sketch(p) {
-    const TXT = 'Coding Train', ASSETS = 'assets/', FONT_PATH = ASSETS + 'AvenirNextLTPro-Demi.otf', FONT_SIZE = 0o150, OFFSET = 50, FACTOR = .25, BG = 0o100;
     var font, bg, vehicles;
     p.preload = function () {
         font = this.loadFont(FONT_PATH);

@@ -1,5 +1,5 @@
 /**
- * Steering Text Paths #059 (v1.0.2)
+ * Steering Text Paths #059 (v1.0.3)
  * Daniel Shiffman (2017-Feb)
  *
  * https://GitHub.com/CodingTrain/Coding-Challenges/tree/main/059_Steering_Text_Paths
@@ -18,16 +18,16 @@
 import type p5 from "p5";
 import Vehicle from "./vehicle.mjs";
 
-export default function sketch(p: p5) {
-  const
-    TXT = 'Coding Train',
-    ASSETS = 'assets/',
-    FONT_PATH = ASSETS + 'AvenirNextLTPro-Demi.otf',
-    FONT_SIZE = 0o150,
-    OFFSET = 50,
-    FACTOR = .25,
-    BG = 0o100;
+const
+  TXT = 'Coding Train',
+  ASSETS = 'assets/',
+  FONT_PATH = ASSETS + 'AvenirNextLTPro-Demi.otf',
+  FONT_SIZE = 0o150,
+  OFFSET = 50,
+  FACTOR = .25,
+  BG = 0o100;
 
+export default function sketch(p: p5) {
   var font: p5.Font, bg: p5.Color, vehicles: Vehicle[];
 
   p.preload = function() {
