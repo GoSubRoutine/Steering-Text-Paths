@@ -15,7 +15,7 @@ export default class Vehicle {
 
   constructor(
     x: number, y: number,
-    protected p = window.p5?.instance,
+    protected p = window.p5.instance,
     public    pos = p.createVector(p.random(p.width), p.random(p.height)),
     public    tgt = p.createVector(x, y),
     protected acc = p.createVector(),

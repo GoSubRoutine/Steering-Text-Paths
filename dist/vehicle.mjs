@@ -13,7 +13,7 @@ export default class Vehicle {
     static MAX_FORCE = 1;
     static MAX_DIST = 100;
     vel = window.p5.Vector.random2D();
-    constructor(x, y, p = window.p5?.instance, pos = p.createVector(p.random(p.width), p.random(p.height)), tgt = p.createVector(x, y), acc = p.createVector(), tmp = p.createVector(), col = p.color(Vehicle.STROKE)) {
+    constructor(x, y, p = window.p5.instance, pos = p.createVector(p.random(p.width), p.random(p.height)), tgt = p.createVector(x, y), acc = p.createVector(), tmp = p.createVector(), col = p.color(Vehicle.STROKE)) {
         this.p = p;
         this.pos = pos;
         this.tgt = tgt;
