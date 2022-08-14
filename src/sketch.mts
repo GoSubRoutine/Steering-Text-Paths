@@ -1,5 +1,5 @@
 /**
- * Steering Text Paths #059 (v1.0.3)
+ * Steering Text Paths #059 (v1.1.0)
  * Daniel Shiffman (2017-Feb)
  *
  * https://GitHub.com/CodingTrain/Coding-Challenges/tree/main/059_Steering_Text_Paths
@@ -18,6 +18,8 @@
 import type p5 from "p5";
 import Vehicle from "./vehicle.mjs";
 
+type p5x = p5 & { font: p5.Font, bg: p5.Color, vehicles: Vehicle[] };
+
 const
   TXT = 'Coding Train',
   ASSETS = 'assets/',
@@ -28,27 +30,29 @@ const
   BG = 0o100;
 
 export default function sketch(p: p5) {
-  var font: p5.Font, bg: p5.Color, vehicles: Vehicle[];
+  p.preload = preload;
+  p.setup = setup;
+  p.draw = draw;
+}
 
-  p.preload = function() {
-    font = this.loadFont(FONT_PATH);
-  };
+function preload(this: p5x) {
+  this.font = this.loadFont(FONT_PATH);
+}
 
-  p.setup = function() {
-    this.createCanvas(750, 300);
-    this.stroke(Vehicle.STROKE).strokeWeight(Vehicle.DIAM);
+function setup(this: p5x) {
+  this.createCanvas(750, 300);
+  this.stroke(Vehicle.STROKE).strokeWeight(Vehicle.DIAM);
 
-    const x = OFFSET, y = this.height + OFFSET >> 1;
+  const x = OFFSET, y = this.height + OFFSET >> 1;
 
-    vehicles =
-      font.textToPoints(TXT, x, y, FONT_SIZE, { sampleFactor: FACTOR }).
-      map(({ x, y }) => new Vehicle(x, y, this));
+  this.vehicles =
+    this.font.textToPoints(TXT, x, y, FONT_SIZE, { sampleFactor: FACTOR }).
+    map(({ x, y }) => new Vehicle(x, y, this));
 
-    bg = this.color(BG);
-  };
+  this.bg = this.color(BG);
+}
 
-  p.draw = function() {
-    this.background(bg);
-    for (const vehicle of vehicles)  vehicle.behaviors().update().display();
-  };
+function draw(this: p5x) {
+  this.background(this.bg);
+  for (const vehicle of this.vehicles)  vehicle.behaviors().update().display();
 }
