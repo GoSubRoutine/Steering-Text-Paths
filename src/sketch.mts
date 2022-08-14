@@ -1,5 +1,5 @@
 /**
- * Steering Text Paths #059 (v1.1.0)
+ * Steering Text Paths #059 (v1.1.1)
  * Daniel Shiffman (2017-Feb)
  *
  * https://GitHub.com/CodingTrain/Coding-Challenges/tree/main/059_Steering_Text_Paths
@@ -18,7 +18,7 @@
 import type p5 from "p5";
 import Vehicle from "./vehicle.mjs";
 
-type p5x = p5 & { font: p5.Font, bg: p5.Color, vehicles: Vehicle[] };
+export type p5x = p5 & { font: p5.Font, bg: p5.Color, vehicles: Vehicle[] };
 
 const
   TXT = 'Coding Train',
