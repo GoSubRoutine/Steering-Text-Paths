@@ -1,5 +1,5 @@
 /**
- * Steering Text Paths #059 (v1.1.1)
+ * Steering Text Paths #059 (v1.1.2)
  * Daniel Shiffman (2017-Feb)
  *
  * https://GitHub.com/CodingTrain/Coding-Challenges/tree/main/059_Steering_Text_Paths
@@ -45,8 +45,8 @@ function setup(this: p5x) {
 
   const x = OFFSET, y = this.height + OFFSET >> 1;
 
-  this.vehicles =
-    this.font.textToPoints(TXT, x, y, FONT_SIZE, { sampleFactor: FACTOR }).
+  this.vehicles = this.
+    font.textToPoints(TXT, x, y, FONT_SIZE, { sampleFactor: FACTOR }).
     map(({ x, y }) => new Vehicle(x, y, this));
 
   this.bg = this.color(BG);
