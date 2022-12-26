@@ -4,6 +4,8 @@ import p5Class, { p5InstanceExtensions } from "p5"
 export = p5
 
 declare global {
+  type P5RegTypes = 'init' | 'pre' | 'post' | 'remove'
+
   interface Window extends p5Callbacks {
     p5: typeof p5
   }
