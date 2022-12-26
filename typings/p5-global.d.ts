@@ -1,5 +1,3 @@
-/// <reference path="globals.d.ts" />
-
 import p5Class, { p5InstanceExtensions } from "p5"
 export = p5
 
