@@ -19,8 +19,7 @@ export default class Vehicle {
     public    pos = p.createVector(p.random(p.width), p.random(p.height)),
     public    tgt = p.createVector(x, y),
     protected acc = p.createVector(),
-    protected tmp = p.createVector(),
-    public    col = p.color(Vehicle.STROKE)
+    protected tmp = p.createVector()
   ) {}
 
   update() {
@@ -30,11 +29,7 @@ export default class Vehicle {
   }
 
   show() {
-    this.p.
-      stroke(this.col).
-      strokeWeight(Vehicle.DIAM).
-      point(this.pos.x, this.pos.y);
-
+    this.p.point(this.pos.x, this.pos.y);
     return this;
   }
 
