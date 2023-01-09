@@ -5,7 +5,6 @@ export default class Vehicle {
     tgt;
     acc;
     tmp;
-    col;
     static STROKE = 'lime';
     static DIAM = 6;
     static FLEE = 5;
@@ -13,13 +12,12 @@ export default class Vehicle {
     static MAX_FORCE = 1;
     static MAX_DIST = 100;
     vel = window.p5.Vector.random2D();
-    constructor(x, y, p = window.p5.instance, pos = p.createVector(p.random(p.width), p.random(p.height)), tgt = p.createVector(x, y), acc = p.createVector(), tmp = p.createVector(), col = p.color(Vehicle.STROKE)) {
+    constructor(x, y, p = window.p5.instance, pos = p.createVector(p.random(p.width), p.random(p.height)), tgt = p.createVector(x, y), acc = p.createVector(), tmp = p.createVector()) {
         this.p = p;
         this.pos = pos;
         this.tgt = tgt;
         this.acc = acc;
         this.tmp = tmp;
-        this.col = col;
     }
     update() {
         this.pos.add(this.vel.add(this.acc));
@@ -27,10 +25,7 @@ export default class Vehicle {
         return this;
     }
     show() {
-        this.p.
-            stroke(this.col).
-            strokeWeight(Vehicle.DIAM).
-            point(this.pos.x, this.pos.y);
+        this.p.point(this.pos.x, this.pos.y);
         return this;
     }
     display() {
