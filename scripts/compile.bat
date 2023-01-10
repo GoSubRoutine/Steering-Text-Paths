@@ -1,1 +1,1 @@
-tsc || pause
+tsc

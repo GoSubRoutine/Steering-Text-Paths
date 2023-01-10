@@ -1,1 +1,1 @@
-npm i || pause
+npm i

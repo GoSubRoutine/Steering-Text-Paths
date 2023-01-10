@@ -1,1 +1,1 @@
-npm ln @types/p5 p5 || pause
+npm ln @types/p5 p5
