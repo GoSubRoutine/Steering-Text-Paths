@@ -4,6 +4,16 @@ export = p5
 declare global {
   type P5RegTypes = 'init' | 'pre' | 'post' | 'remove'
 
+  type sketchCallback = (p: p5) => void
+  type p5Callback = (this: p5) => void
+
+  type p5UICallback = (this: p5, evt?: UIEvent) => boolean | void
+  type p5KeyboardCallback = (this: p5, evt?: KeyboardEvent) => boolean | void
+  type p5TouchCallback = (this: p5, evt?: TouchEvent) => boolean | void
+  type p5WheelCallback = (this: p5, evt?: WheelEvent) => boolean | void
+  type p5MouseCallback = (this: p5, evt?: MouseEvent) => boolean | void
+  type p5DragCallback = (this: p5, evt?: DragEvent) => boolean | void
+
   interface Window extends p5Callbacks {
     p5: typeof p5
   }
