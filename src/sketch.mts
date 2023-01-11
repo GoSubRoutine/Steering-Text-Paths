@@ -1,5 +1,5 @@
 /**
- * Steering Text Paths #059 (v1.1.5)
+ * Steering Text Paths #059 (v1.1.6)
  * Daniel Shiffman (2017-Feb)
  *
  * https://GitHub.com/CodingTrain/Coding-Challenges/tree/main/059_Steering_Text_Paths
